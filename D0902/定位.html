@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位案列</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        .container {
+            position: relative;
+            /* 容器相对定位 */
+            width: 100%;
+            height: 500px;
+            border: 1px solid #000;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .static {
+            /*静态定位，默认定位，无需指定*/
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        
+        .relative {
+            /* 相对定位 */
+            position: relative;
+            left: 50px;
+            /* 正数向右移动50px,负数反之 */
+            top: -20px;
+            /* 正数向下移20px，负数反之 */
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        
+        .absolute {
+            /* 绝对定位，相对于最近的已定位的(非静态定位static)父元素，一般和相对定位使用(子绝父相) */
+            position: absolute;
+            right: 20px;
+            /* x向右移动20px，负数反之 */
+            bottom: 20px;
+            /* 离父盒子底部20px，负数则是往外移 */
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        
+        .fixed {
+            position: fixed;
+            /* 固定定位，相对于浏览器窗口，也就是固定在窗口上 */
+            bottom: 0;
+            /* 固定在浏览器窗口底部 */
+            right: 0;
+            /* 固定在浏览器窗口最右 */
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="static">静态定位</div>
+        <div class="relative">相对定位</div>
+        <div class="absolute">绝对定位</div>
+    </div>
+    <div class="fixed">固定定位</div>
+</body>
+
+</html>

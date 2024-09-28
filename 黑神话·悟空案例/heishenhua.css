@@ -1,0 +1,663 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#oneScreen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#vi {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.top-bar {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    left: 7%;
+    top: 8%;
+}
+
+.top-bar-item-fir {
+    color: #fff;
+    font-family: STKaiti, Kaiti SC, Kaiti, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.top-bar-item {
+    color: #A5A5A5;
+    font-family: STKaiti, Kaiti SC, Kaiti, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.gamelogo {
+    width: 8%;
+    height: 25%;
+    position: fixed;
+    top: 8%;
+    right: 8%;
+    z-index: 10;
+}
+
+.gamelogo img {
+    width: 100%;
+    height: 100%;
+}
+
+.gamelogo .logo1 {
+    width: 80%;
+    height: 15%;
+    float: right;
+}
+
+.gamelogo .logo2 {
+    float: right;
+    width: 22%;
+    height: 38%;
+    margin-top: 25%;
+}
+
+#wukongbox {
+    width: 35%;
+    height: 55%;
+    position: absolute;
+    right: 10%;
+    top: 15%;
+}
+
+.wukonglogo {
+    width: 90%;
+    height: 70%;
+    background-image: url(./img/home-logo-zh.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.newBuy {
+    width: 65%;
+    height: 15%;
+    margin: 15% auto;
+    background-image: url(./img/buy-btn-sch.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.langbox {
+    width: 7%;
+    height: 40%;
+    position: fixed;
+    z-index: 2;
+    top: 66%;
+    right: 5%;
+}
+
+.global {
+    width: 100%;
+    height: 8%;
+    text-align: center;
+    position: absolute;
+    top: 66%;
+    right: 3%;
+}
+
+.global img {
+    height: 100%;
+}
+
+.langitem {
+    width: 90%;
+    height: 58%;
+    text-align: center;
+}
+
+.langitem ul {
+    /* 隐藏 */
+    display: none;
+    list-style: none;
+}
+
+.langitem ul li:last-child {
+    padding-bottom: 19px;
+}
+
+.langitem a {
+    text-decoration: none;
+    color: #A5A5A5;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+/* 相邻兄弟选择器，用于选择紧接在另一元素后的元素 */
+
+.global:hover+.langitem ul {
+    display: block;
+}
+
+.langitem ul:hover {
+    display: block;
+}
+
+.langitem ul li a:hover {
+    font-size: 20px;
+    color: #fcfafa;
+}
+
+.senScreen {
+    width: 100%;
+    height: 655px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    background-image: url(./img/img_bg.png);
+    z-index: -1;
+}
+
+.senScreen .bj1 {
+    position: absolute;
+    width: 100%;
+    height: 51vw;
+    /* 51%宽口宽度距高 */
+    background-image: url(./img/praise_top_bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.senScreen .bj2 {
+    position: absolute;
+    width: 100%;
+    height: 51vw;
+    background-image: url(./img/praise_bottom_bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.senScreen .rows {
+    width: 75%;
+    height: 80%;
+    z-index: 2;
+}
+
+.senScreen .rows .row {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row img {
+    width: 13%;
+}
+
+.thiScreen {
+    width: 100%;
+    height: 920px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.thiScreen .play {
+    width: 6%;
+    height: 9%;
+    position: absolute;
+    z-index: 10;
+    background-image: url(./img/video_play_btn.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 25%;
+    left: 50%;
+    cursor: pointer;
+}
+
+.thiScreen .thibg {
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/video-overlay-bg.png);
+    position: relative;
+    z-index: 1;
+}
+
+.thiScreen .thivi {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.lbbox {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 40%;
+    z-index: 2;
+}
+
+.lbbox .swiper-contaiener {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 95%;
+}
+
+.swiper-pagination {
+    position: absolute;
+    text-align: right;
+}
+
+.swiper-pagination-bullet {
+    width: 35px;
+    height: 2px;
+    /* 横线的颜色 */
+    background-color: #fff;
+    /* 块级元素变行级元素 */
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.lookBtn {
+    width: 20%;
+    height: 6%;
+    background-image: url(./img/news-more-btn.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.fourScreen {
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    display: flex;
+    background-image: url(./img/img_bg.png);
+}
+
+.fourBg1 {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    margin-top: 240px;
+    background-image: url(./img/img_bg_introduce_1_b.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.fourBg2 {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    margin-top: 240px;
+    background-image: url(./img/img_bg_introduce_1_a.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.fourItem {
+    width: 25%;
+    height: 25%;
+    margin-top: 35%;
+    margin-left: 15%;
+    font-family: STKaiti, Kaiti SC, Kaiti, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif;
+    color: #fff;
+    z-index: 2;
+    /* border: 1px solid red; */
+}
+
+.fourVid {
+    margin-top: 10%;
+    width: 70%;
+    height: 45%;
+    display: flex;
+    position: relative;
+}
+
+.fourVid .play {
+    width: 22%;
+    height: 35%;
+    position: absolute;
+    z-index: 10;
+    background-image: url(./img/video_play_btn.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    left: 34%;
+    top: 30%;
+    /* top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; */
+    /* margin: auto; */
+    cursor: pointer;
+}
+
+
+/* ------------------- */
+
+.fiveScreen {
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    display: flex;
+    background-image: url(./img/img_bg.png);
+}
+
+.fiveBg1 {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    margin-top: 240px;
+    background-image: url(./img/img_bg_introduce_2_b.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.fiveBg2 {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    margin-top: 240px;
+    background-image: url(./img/img_bg_introduce_2_a.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.fiveItem {
+    width: 25%;
+    height: 25%;
+    margin-top: 35%;
+    margin-left: 15%;
+    font-family: STKaiti, Kaiti SC, Kaiti, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif;
+    color: #fff;
+    z-index: 2;
+    /* border: 1px solid red; */
+}
+
+.fiveVid {
+    margin-top: 10%;
+    width: 70%;
+    height: 45%;
+    display: flex;
+    position: relative;
+}
+
+.fiveVid .play {
+    width: 22%;
+    height: 35%;
+    position: absolute;
+    z-index: 10;
+    background-image: url(./img/video_play_btn.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    left: 34%;
+    top: 30%;
+    /* top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; */
+    /* margin: auto; */
+    cursor: pointer;
+}
+
+
+/* ------------------------- */
+
+.sixScreen {
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    display: flex;
+    background-image: url(./img/img_bg.png);
+}
+
+.sixBg1 {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    margin-top: 240px;
+    background-image: url(./img/img_bg_introduce_3_b.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.sixBg2 {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    margin-top: 240px;
+    background-image: url(./img/img_bg_introduce_3_a.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.sixItem {
+    width: 1536px;
+    height: 25%;
+    margin-top: 35%;
+    text-align: end;
+    margin-right: 15%;
+    font-family: STKaiti, Kaiti SC, Kaiti, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif;
+    color: #fff;
+    z-index: 2;
+    /* border: 1px solid red; */
+}
+
+.sixVid {
+    margin-top: 3%;
+    width: 70%;
+    height: 45%;
+    display: flex;
+    position: relative;
+    left: 81%;
+    /* justify-content: end; */
+}
+
+.sixVid .play {
+    width: 6%;
+    height: 32%;
+    position: absolute;
+    z-index: 10;
+    background-image: url(./img/video_play_btn.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    left: 10%;
+    top: 33%;
+    /* top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; */
+    /* margin: auto; */
+    cursor: pointer;
+}
+
+
+/* -------------------- */
+
+.sevenScreen {
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    display: flex;
+    background-image: url(./img/img_bg.png);
+}
+
+.sevenBg1 {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    margin-top: 240px;
+    background-image: url(./img/img_bg_introduce_4_b.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.sevenBg2 {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    margin-top: 240px;
+    background-image: url(./img/img_bg_introduce_4_a.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.sevenItem {
+    width: 25%;
+    height: 25%;
+    margin-top: 35%;
+    margin-left: 15%;
+    font-family: STKaiti, Kaiti SC, Kaiti, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif;
+    color: #fff;
+    z-index: 2;
+    /* border: 1px solid red; */
+}
+
+.sevenVid {
+    margin-top: 10%;
+    width: 70%;
+    height: 45%;
+    display: flex;
+    position: relative;
+}
+
+.sevenVid .play {
+    width: 22%;
+    height: 35%;
+    position: absolute;
+    z-index: 10;
+    background-image: url(./img/video_play_btn.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    left: 34%;
+    top: 30%;
+    /* top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; */
+    /* margin: auto; */
+    cursor: pointer;
+}
+
+.eigScreen {
+    width: 100%;
+    height: 855px;
+    position: relative;
+    background-image: url(./img/img_bg.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eigBg1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/img_bg_art.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.eigShow {
+    width: 70%;
+    height: 70%;
+    z-index: 2;
+    /* background-color: red; */
+}
+
+.eigItem {
+    width: 100%;
+    height: 6%;
+}
+
+.eigItem1 {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eigItem1-l {
+    width: 50%;
+    height: 100%;
+    background-image: url(./img/tab_ck_l.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.eigItem1-r {
+    width: 50%;
+    height: 100%;
+    background-image: url(./img/tab_ck_r.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.eigItem1-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: STKaiti;
+    font-size: 18px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#ban1:hover {
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.showImg {
+    width: 90%;
+    height: 70%;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.showImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.imgBox {
+    width: 100%;
+    height: 20%;
+    margin-top: 1%;
+}
+
+.imgBox-item {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.imgBox-item img {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css动画缩放案例</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            transform-origin: center center;
+            /* 设置缩放的中心点，根据中心点缩放 */
+            animation: zoom 2s infinite alternate;
+        }
+        
+        @keyframes zoom {
+            from {
+                transform: scale(1);
+                /* 初始状态，元素保持原始大小 */
+            }
+            to {
+                transform: scale(1.5);
+                /* 解释状态，元素放大到原始大小的1.5倍 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

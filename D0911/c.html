@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css事件</title>
+    <style>
+        /* 鼠标悬停事件 */
+        
+        .c1:hover {
+            cursor: pointer;
+            /* 鼠标变成小手 */
+            background-color: lightblue;
+        }
+        /* 获得鼠标焦点事件 */
+        
+        input:focus {
+            background-color: lightcoral;
+            border: 2px solid blue;
+        }
+        
+        .c2 {
+            width: 200px;
+            height: 200px;
+            background-color: lightcyan;
+        }
+        /* 激活事件 */
+        
+        .c2:active {
+            width: 400px;
+            height: 400px;
+            transition: 3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">
+        鼠标悬停时鼠标变成小手型
+    </div>
+    <input type="text" value="获得焦点时改变颜色">
+    <div class="c2">鼠标点击时变大</div>
+</body>
+
+</html>

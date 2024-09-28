@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css动画旋转方块</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+        }
+        
+        .box {
+            display: flex;
+            justify-content: center;
+            /* 在主轴上居中 水平居中 */
+            align-items: center;
+            /* 在交叉轴是居中 垂直居中 */
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cube {
+            width: 200px;
+            height: 200px;
+            background-color: #03e9f4;
+            border-radius: 15px;
+            /* 给四边加阴影效果 */
+            box-shadow: 0 0 10px rgb(3, 233, 244, 1), 0 0 50px rgb(3, 233, 244, 1), 0 0 100px rgb(3, 233, 244, 0.5), 0 0 150px rgb(3, 233, 244, 0.5);
+            /* 动画名称，完成时间，速度曲线 次数 */
+            animation: rotate 3.5s ease-out infinite;
+            transform-origin: bottom right;
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(-45deg);
+            }
+            80% {
+                transform: rotate(45deg);
+            }
+            85% {
+                transform: rotate(41deg);
+            }
+            90% {
+                transform: rotate(-45deg);
+            }
+            95% {
+                transform: rotate(43deg);
+            }
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="cube"></div>
+        </div>
+    </div>
+</body>
+
+</html>

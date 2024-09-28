@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑神话·悟空</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- 引入外部文件 -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./heishenhua.css">
+    <style>
+        .sNewBuy {
+            width: 205px;
+            height: 40px;
+            position: fixed;
+            left: 30px;
+            bottom: 30px;
+            background-image: url(./img/buy-btn-sch.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            display: none;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="sNewBuy"></div>
+        <div class="daoHang">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="thi"></div>
+            <div class="thr"></div>
+        </div>
+        <!-- 第一屏开始 -->
+        <div id="oneScreen">
+            <!-- oneMP4 -->
+            <div>
+                <!-- 
+                    preload="auto" 预加载(浏览器在页面加载时，预先加载视频)，为了快速播报
+                    loop 循环播放
+                    muted 静音播放
+                    autoplay 自动播放
+                -->
+                <video id="vi" src="./img/video_WebTitle_batch.mp4" loop preload="auto" muted autoplay>您的浏览器不支持本视频播放，请尝试换一个浏览器或升级到最新版本
+                </video>
+            </div>
+            <!-- 导航栏 -->
+            <div class="top-bar">
+                <div class="top-bar-item-fir">首页</div>
+                <div class="top-bar-item">新闻</div>
+                <div class="top-bar-item">产品介绍</div>
+                <div class="top-bar-item">视听站</div>
+                <div class="top-bar-item">客户支持</div>
+            </div>
+            <!-- 游戏logo -->
+            <div class="gamelogo">
+                <div class="logo1">
+                    <img src="./img/logo1.png" alt="">
+                </div>
+                <div class="logo2">
+                    <img src="./img/logo2.png" alt="">
+                </div>
+            </div>
+            <!-- 悟空 -->
+            <div id="wukongbox">
+                <div class="wukonglogo">
+                </div>
+                <div class="newBuy">
+                </div>
+            </div>
+            <div class="langbox">
+                <div class="global">
+                    <img src="img/c1ca.png" alt="">
+                </div>
+                <div class="langitem">
+                    <ul>
+                        <li><a href="#"> 简体中文 </a></li>
+                        <li><a href="#"> 繁體中⽂ </a> </li>
+                        <li><a href="#"> English </a> </li>
+                        <li><a href="#"> 日本語 </a> </li>
+                        <li><a href="#"> 한국어 </a> </li>
+                        <li><a href="#"> Français </a> </li>
+                        <li><a href="#"> Deutsch </a> </li>
+                        <li><a href="#"> Español </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 第二屏开始 -->
+        <div class="senScreen">
+            <div class="bj1"></div>
+            <div class="bj2"></div>
+            <div class="rows">
+                <div class="row">
+                    <img src="./img/img_web_score_3DM.png">
+                    <img src="./img/img_web_score_A9VG.png">
+                    <img src="./img/img_web_score_ali213_zh.png">
+                    <img src="./img/img_web_score_Areajugones.png">
+                    <img src="./img/img_web_score_CGMagazine.png">
+                    <img src="./img/img_web_score_COGconnected.png">
+                    <img src="./img/img_web_score_ERBING_zh.png">
+                </div>
+                <div class="row">
+                    <img src="./img/img_web_score_Everyeye.png">
+                    <img src="./img/img_web_score_GameBlast.png">
+                    <img src="./img/img_web_score_Gamersky_zh.png">
+                    <img src="./img/img_web_score_GamersRD.png">
+                    <img src="./img/img_web_score_CGMagazine.png">
+                    <img src="./img/img_web_score_GodIsAGeek.png">
+                </div>
+                <div class="row">
+                    <img src="./img/img_web_score_HardcoreGamer.png">
+                    <img src="./img/img_web_score_IGN.png">
+                    <img src="./img/img_web_score_A9VG.png">
+                    <img src="./img/img_web_score_ali213_zh.png">
+                    <img src="./img/img_web_score_CGMagazine.png">
+                    <img src="./img/img_web_score_CGMagazine.png">
+                    <img src="./img/img_web_score_COGconnected.png">
+
+                </div>
+                <div class="row">
+                    <img src="./img/img_web_score_Everyeye.png">
+                    <img src="./img/img_web_score_GameBlast.png">
+                    <img src="./img/img_web_score_Gamersky_zh.png">
+                    <img src="./img/img_web_score_GamersRD.png">
+                    <img src="./img/img_web_score_GodIsAGeek.png">
+                    <img src="./img/img_web_score_HardcoreGamer.png">
+                </div>
+            </div>
+        </div>
+        <!-- 第三屏开始 -->
+        <div class="thiScreen">
+            <div class="play"></div>
+            <div class="thibg"></div>
+            <video src="./img/gamesci_2024_PV07_preview.mp4" class="thivi" preload="auto" loop autoplay muted></video>
+            <!-- 轮播图开始 -->
+            <div class="lbbox">
+                <div class="swiper-contaiener">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/96_sch_1724103420942523433.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/59_sch_1723879199996606256.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/42_sch_1723482870688017955.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/38_sch_1723483153112709481.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/20_sch_1717502828718725122.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination">
+                    </div>
+                </div>
+                <div class="lookBtn">
+                    查看更多
+                </div>
+            </div>
+            <!-- 轮播图结束 -->
+        </div>
+        <!-- 第四屏开始 -->
+        <div class="fourScreen">
+            <div class="fourBg1">
+            </div>
+            <div class="fourBg2">
+            </div>
+            <!-- 背景图片结束 -->
+            <div class="fourItem">
+                <div style="font-size: 40px;">关卡多端</div>
+                <div>
+                    <div style="font-size: 21px;">雄奇壮丽，<span style="color: red;">光怪陆离</span></div>
+                    <div style="font-size: 21px;">重走<span style="color: red;">西游</span>故地，再写神话结局</div>
+                </div>
+                <div class="fourVid">
+                    <div class="play"></div>
+                    <video src="./img/gamesci_2023PV05_preview.mp4" class="fourvi" preload="auto" loop autoplay muted>
+                    </video>
+                </div>
+            </div>
+        </div>
+        <!-- 第五屏开始 -->
+        <div class="fiveScreen">
+            <div class="fiveBg1">
+            </div>
+            <div class="fiveBg2">
+            </div>
+            <!-- 背景图片结束 -->
+            <div class="fiveItem">
+                <div style="font-size: 40px;">妖王凶猛</div>
+                <div>
+                    <div style="font-size: 21px;"><span style="color: red;">妖魔鬼怪</span>，卷土重来</div>
+                    <div style="font-size: 21px;">直面罕见<span style="color: red;">强敌</span>，对阵昔日传奇</div>
+                </div>
+                <div class="fiveVid">
+                    <div class="play"></div>
+                    <video src="./img/gamesci_2021PV02_preview.mp4" class="fivevi" preload="auto" loop autoplay muted>
+                    </video>
+                </div>
+            </div>
+        </div>
+        <!-- 第六屏开始 -->
+        <div class="sixScreen">
+            <div class="sixBg1">
+            </div>
+            <div class="sixBg2">
+            </div>
+            <!-- 背景图片结束 -->
+            <div class="sixItem">
+                <div style="font-size: 40px;">变化无穷</div>
+                <div>
+                    <div style="font-size: 21px;">山摇地动，<span style="color: red;">各显神通</span></div>
+                    <div style="font-size: 21px;">自由搭配<span style="color: red;">法术</span>，随心构筑天赋</div>
+                </div>
+                <div class="sixVid">
+                    <div class="play"></div>
+                    <video src="./img/gamesci_2024PV08_preview.mp4" class="sixvi" preload="auto" loop autoplay muted>
+                    </video>
+                </div>
+            </div>
+        </div>
+        <!-- 第七屏开始 -->
+        <div class="sevenScreen">
+            <div class="sevenBg1">
+            </div>
+            <div class="sevenBg2">
+            </div>
+            <!-- 背景图片结束 -->
+            <div class="sevenItem">
+                <div style="font-size: 40px;">故事新编</div>
+                <div>
+                    <div style="font-size: 21px;">千形万象<span style="color: red;">荡气回肠</span></div>
+                    <div style="font-size: 21px;">了解<span style="color: red;">他们的</span>爱与恨，贪与嗔，前世与今生</div>
+                </div>
+                <div class="sevenVid">
+                    <div class="play"></div>
+                    <video src="./img/gamesci_2022PV03_preview.mp4" class="sevenvi" preload="auto" loop autoplay muted>
+                    </video>
+                </div>
+            </div>
+        </div>
+        <!-- 第八屏开始 -->
+        <div class="eigScreen">
+            <div class="eigBg1"></div>
+            <!-- 第八屏中间内容 -->
+            <div class="eigShow">
+                <!-- 导航栏开始 -->
+                <div class="eigItem">
+                    <div class="eigItem1">
+                        <div class="eigItem1-l"></div>
+                        <div class="eigItem1-r"></div>
+                        <div class="eigItem1-text" id="ban1">视频</div>
+                    </div>
+                    <div class="eigItem1">
+                        <div class="eigItem1-l"></div>
+                        <div class="eigItem1-r"></div>
+                        <div class="eigItem1-text" id="ban1">游戏截图</div>
+                    </div>
+                    <div class="eigItem1">
+                        <div class="eigItem1-l"></div>
+                        <div class="eigItem1-r"></div>
+                        <div class="eigItem1-text" id="ban1">壁纸</div>
+                    </div>
+                    <div class="eigItem1">
+                        <div class="eigItem1-l"></div>
+                        <div class="eigItem1-r"></div>
+                        <div class="eigItem1-text" id="ban1">原画</div>
+                    </div>
+                </div>
+                <!-- 图片展示开始 -->
+                <div class="showImg">
+                    <img src="./img/img_art_video_6.png" alt="">
+                </div>
+                <!-- 小图标开始 -->
+                <div class="imgBox">
+                    <div class="imgBox-item">
+                        <img src="./img/img_art_video_6.png" alt="">
+                    </div>
+                    <div class="imgBox-item">
+                        <img src="./img/img_art_video_5.png" alt="">
+                    </div>
+                    <div class="imgBox-item">
+                        <img src="./img/img_art_video_4.png" alt="">
+                    </div>
+                    <div class="imgBox-item">
+                        <img src="./img/img_art_video_3.png" alt="">
+                    </div>
+                    <div class="imgBox-item">
+                        <img src="./img/img_art_video_2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 关联到页面上类选择器名为.swiper-contaiener的元素，也就是我们的轮播图容器
+        var mySwiper = new Swiper(".swiper-contaiener", {
+            // 设置轮播图属性
+            effect: "fade", // 设置轮播图的切换效果为淡入淡出
+            autoplay: true, // 设置自动播放
+            pagination: {
+                el: ".swiper-pagination", //分页器 指定分页器的类选择器名
+                clickable: true // 添加点击切换功能
+            }
+        })
+
+        const buy = document.querySelector('.sNewBuy')
+        window.addEventListener('scroll', function() {
+            const n = document.documentElement.scrollTop
+            if (n >= 300) {
+                buy.style.display = 'block'
+            } else {
+                buy.style.display = 'none'
+            }
+        })
+    </script>
+</body>
+
+</html>

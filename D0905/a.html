@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS盒子模型案例</title>
+    <style>
+        /* 重置样式 */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* 使得padding和border不会增加元素的宽度和高度 */
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            /* 主轴对齐方式居中对齐 */
+            align-items: center;
+            /* 交叉轴对齐方式居中对齐 */
+            height: 100vh;
+            /* 充满整个窗口 */
+            background-color: #f0f0f0;
+        }
+        
+        .box {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid #333;
+            margin: 20px;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        我是盒子中的内容
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性布局案例</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            /* 声明该容器为弹性盒子布局容器 */
+            flex-direction: row;
+            /* 主轴方向为水平方向 */
+            flex-wrap: wrap;
+            /* 允许换行 */
+            justify-content: space-around;
+            align-items: center;
+            border: 2px solid #000;
+            padding: 10px;
+            width: 60%;
+            height: 300px;
+            margin: 20px auto;
+        }
+        
+        .item {
+            flex: 1 1 auto;
+            min-width: 100px;
+            margin: 5px;
+            padding: 10px;
+            border: 1 solid #ccc;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        
+        .item1 {
+            flex-grow: 0;
+            /* 不放大 */
+            background-color: lightblue;
+        }
+        
+        .item2 {
+            flex-grow: 2;
+            /* 放大两倍 */
+            background-color: indianred;
+        }
+        
+        .item3 {
+            order: -1;
+            /* 排到最前面 */
+            background-color: lightcyan;
+        }
+        
+        .item4 {
+            flex-shrink: 0;
+            /* 不缩小 */
+            background-color: lightgoldenrodyellow;
+        }
+        
+        .item5 {
+            align-self: flex-end;
+            /* 交叉轴对齐方式改变 */
+            background-color: lightgray;
+        }
+        
+        .item6 {
+            flex-basis: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+        <div class="item item4">item4</div>
+        <div class="item item5">item5</div>
+        <div class="item item6">item6</div>
+    </div>
+</body>
+
+</html>
